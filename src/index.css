@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 56% 97%;
+    --foreground: 30 21% 30%;
+    --card: 0 0% 100%;
+    --card-foreground: 152 40% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 152 40% 17%;
+    --primary: 14 51% 51%;
+    --primary-foreground: 43 56% 97%;
+    --secondary: 41 66% 89%;
+    --secondary-foreground: 152 40% 17%;
+    --muted: 40 30% 92%;
+    --muted-foreground: 30 15% 45%;
+    --accent: 33 76% 61%;
+    --accent-foreground: 152 40% 17%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 25% 86%;
+    --input: 35 25% 86%;
+    --ring: 14 51% 51%;
+    --radius: 0.625rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-bark font-body antialiased;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-forest;
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: #e89b50;
+    color: #1a3d2e;
+  }
+}
+
+@layer utilities {
+  /* Film grain overlay, like old printed paper */
+  .grain::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  }
+  .label-caps {
+    @apply font-body uppercase font-semibold;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Torn-paper divider */
+.torn {
+  display: block;
+  width: 100%;
+  height: 42px;
+}
+
+/* Scrapbook photo treatment */
+.snap {
+  background: #fff;
+  padding: 10px 10px 34px;
+  box-shadow: 0 12px 32px -12px rgba(26, 61, 46, 0.35);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s;
+}
+.snap:hover {
+  transform: rotate(0deg) scale(1.02) !important;
+  box-shadow: 0 22px 44px -14px rgba(26, 61, 46, 0.45);
+}
+.snap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Article card lift */
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s;
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 36px -16px rgba(26, 61, 46, 0.28);
+}
+
+/* Underline sweep for nav links */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 100%;
+  background: #c45c3e;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Paw stamp rotation on hover */
+.stamp {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.stamp:hover {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+/* Prose for article body */
+.article-body p {
+  margin-bottom: 1.1rem;
+}
+.article-body h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 2.4rem 0 0.9rem;
+  line-height: 1.25;
+}
+.article-body h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.6rem 0 0.5rem;
+}
+.article-body ul,
+.article-body ol {
+  margin: 0 0 1.2rem 1.3rem;
+}
+.article-body ul li,
+.article-body ol li {
+  margin-bottom: 0.45rem;
+}
+.article-body ul {
+  list-style: none;
+  margin-left: 0.2rem;
+}
+.article-body ul li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+.article-body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: #e89b50;
+}
+.article-body ol {
+  list-style: decimal;
+}
+.article-body strong {
+  color: #1a3d2e;
+}
+
+/* Marquee for the ticker */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+/* Gentle float for hero badge */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(-6deg); }
+  50% { transform: translateY(-10px) rotate(-4deg); }
+}
+.floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
