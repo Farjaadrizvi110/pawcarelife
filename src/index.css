@@ -199,3 +199,59 @@
 .floaty {
   animation: floaty 6s ease-in-out infinite;
 }
+
+/* ╔══════════════════════════════════════════════════════════╗
+   ║ NETLIFY BRANDING — NUCLEAR HIDE v2                      ║
+   ║ - Small pill: [data-netlify-brand-badge] ...            ║
+   ║ - AI chat popup: injected iframe (src=*.netlify.com)    ║
+   ║ - Catch-alls: fixed bottom-right + any text="Hide this  ║
+   ║   badge"/"Build your own site with Netlify" (JS layer)  ║
+   ╚══════════════════════════════════════════════════════════╝ */
+[data-netlify-brand-badge],
+[data-netlify-badge],
+[class*="netlify-brand"],
+[class*="netlify-badge"],
+[class*="netlify-powered"],
+[class*="netlify-copilot"],
+[class*="netlify-drop"],
+[id*="netlify-badge"],
+div[aria-label*="Netlify"],
+div[title*="Netlify"],
+div[class*="css-"][style*="bottom:"][style*="position: fixed"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  position: absolute !important;
+}
+
+/* Netlify AI "Build your own site" modal / pill lives in an iframe.
+   Hide the iframe wrapper at the DOM level so it never draws. */
+iframe[src*="netlify"],
+iframe[src*="netli"],
+iframe[data-netlify],
+iframe[title*="Netlify"],
+iframe[title*="Build your own"],
+iframe[aria-label*="Netlify"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  clip-path: inset(100%) !important;
+  position: absolute !important;
+}
+
+/* Catch-all for any injected pill on the bottom-right Netlify area */
+body > div[style*="position: fixed"][style*="bottom"][style*="z-index"],
+body > div[style*="position: fixed"][style*="right:"][style*="bottom:"] {
+  display: none !important;
+}

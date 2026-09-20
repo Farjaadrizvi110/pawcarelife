@@ -11,7 +11,171 @@
       content="Paws & Purpose — practical dog, cat & donkey care guides that fund street animal rescue in Pakistan. Every reader helps an animal."
     />
     <meta name="theme-color" content="#1a3d2e" />
-    <meta name="google-site-verification" content="UBfUoZG1xfPxsq7_fzY8RVe3-RjA_RUwrIUQm2MIKQ4" />
+    <meta
+      name="google-site-verification"
+      content="UBfUoZG1xfPxsq7_fzY8RVe3-RjA_RUwrIUQm2MIKQ4"
+    />
+    <style>
+      [data-netlify-brand-badge],
+      [data-netlify-badge],
+      [class*="netlify-brand"],
+      [class*="netlify-badge"],
+      [class*="netlify-powered"],
+      [class*="netlify-copilot"],
+      [class*="netlify-drop"],
+      [id*="netlify-badge"],
+      div[aria-label*="Netlify"],
+      div[title*="Netlify"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        pointer-events: none !important;
+        overflow: hidden !important;
+        clip-path: inset(100%) !important;
+        position: absolute !important;
+      }
+      iframe[src*="netlify"],
+      iframe[src*="netli"],
+      iframe[data-netlify],
+      iframe[title*="Netlify"],
+      iframe[title*="Build your own"],
+      iframe[aria-label*="Netlify"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        border: 0 !important;
+        pointer-events: none !important;
+        overflow: hidden !important;
+        clip-path: inset(100%) !important;
+        position: absolute !important;
+      }
+      body > div[style*="position: fixed"][style*="bottom"][style*="z-index"],
+      body > div[style*="position: fixed"][style*="right:"][style*="bottom:"] {
+        display: none !important;
+      }
+    </style>
+    <script>
+      (function () {
+        var NETLIFY_TEXT = [
+          "Powered by Netlify",
+          "Build your own site with Netlify",
+          "Hide this badge",
+          "Drop a site you already have",
+        ];
+        var NETLIFY_HREF = ["netlify.com", "netli."];
+        var BAD = new Set();
+        function hasNetlify(el) {
+          try {
+            if (el.nodeType !== 1) return false;
+            if (el.tagName === "IFRAME") {
+              var src = el.getAttribute("src") || "";
+              var tl = (el.getAttribute("title") || "").toLowerCase();
+              var al = (el.getAttribute("aria-label") || "").toLowerCase();
+              if (
+                NETLIFY_HREF.some(function (h) {
+                  return src.indexOf(h) !== -1;
+                })
+              )
+                return true;
+              if (
+                tl.indexOf("netlify") !== -1 ||
+                tl.indexOf("build your own") !== -1
+              )
+                return true;
+              if (al.indexOf("netlify") !== -1) return true;
+            }
+            var c = (el.getAttribute("class") || "").toString().toLowerCase();
+            var id = (el.getAttribute("id") || "").toLowerCase();
+            var ar = (el.getAttribute("aria-label") || "").toLowerCase();
+            var ti = (el.getAttribute("title") || "").toLowerCase();
+            if (
+              c.indexOf("netlify") !== -1 ||
+              id.indexOf("netlify") !== -1 ||
+              ar.indexOf("netlify") !== -1 ||
+              ti.indexOf("netlify") !== -1
+            )
+              return true;
+            var s = el.getAttribute("style") || "";
+            var parent = el.parentElement;
+            var isBodyChild = parent && parent.tagName === "BODY";
+            var txt = (el.innerText || el.textContent || "").slice(0, 400);
+            if (
+              txt.length > 30 &&
+              NETLIFY_TEXT.some(function (t) {
+                return txt.indexOf(t) !== -1;
+              })
+            )
+              return true;
+            if (
+              isBodyChild &&
+              s.indexOf("position: fixed") !== -1 &&
+              (s.indexOf("bottom:") !== -1 || s.indexOf("right:") !== -1)
+            ) {
+              if (
+                NETLIFY_TEXT.some(function (t) {
+                  return txt.indexOf(t) !== -1;
+                })
+              )
+                return true;
+            }
+          } catch (e) {}
+          return false;
+        }
+        function kill(el) {
+          if (!el || BAD.has(el)) return;
+          BAD.add(el);
+          try {
+            el.parentNode && el.parentNode.removeChild(el);
+          } catch (e) {}
+          try {
+            el.remove && el.remove();
+          } catch (e) {}
+        }
+        function scan(root) {
+          try {
+            if (!root) return;
+            if (hasNetlify(root)) {
+              kill(root);
+              return;
+            }
+            if (!root.querySelectorAll) return;
+            var nodes = root.querySelectorAll("*");
+            for (var i = 0; i < nodes.length; i++) {
+              var n = nodes[i];
+              if (BAD.has(n)) continue;
+              if (hasNetlify(n)) {
+                kill(n);
+              }
+            }
+          } catch (e) {}
+        }
+        scan(document.documentElement);
+        try {
+          var mo = new MutationObserver(function (records) {
+            for (var i = 0; i < records.length; i++) {
+              var r = records[i];
+              for (var j = 0; j < r.addedNodes.length; j++) {
+                scan(r.addedNodes[j]);
+              }
+            }
+          });
+          mo.observe(document.documentElement, {
+            childList: true,
+            subtree: true,
+          });
+        } catch (e) {}
+        var tries = 0;
+        var tick = setInterval(function () {
+          scan(document.body || document.documentElement);
+          tries++;
+          if (tries > 40) clearInterval(tick);
+        }, 200);
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -29,6 +193,11 @@
       rel="preconnect dns-prefetch"
       href="https://googleads.g.doubleclick.net"
     />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9475460975059195"
+      crossorigin="anonymous"
+    ></script>
     <script>
       (function () {
         try {
@@ -37,7 +206,7 @@
             s.async = true;
             s.crossOrigin = "anonymous";
             s.src =
-              "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX";
+              "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9475460975059195";
             document.head.appendChild(s);
           }
         } catch (e) {}

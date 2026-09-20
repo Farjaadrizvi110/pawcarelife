@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 
 export const COOKIE_CONSENT_KEY = 'pp-cookie-consent'
-export const ADSENSE_CLIENT_ID = 'ca-pub-XXXXXXXXXXXXXXXX'
+export const ADSENSE_CLIENT_ID = 'ca-pub-9475460975059195'
 export const ADSENSE_SLOT_DEFAULT = 'XXXXXXXXXX'
 
 export function hasAdConsent() {
