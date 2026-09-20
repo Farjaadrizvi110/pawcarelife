@@ -62,6 +62,7 @@ export default function SEO({
 
       <meta name="theme-color" content="#1a3d2e" />
       <meta name="application-name" content={SITE_NAME} />
+      <meta name="google-site-verification" content="UBfUoZG1xfPxsq7_fzY8RVe3-RjA_RUwrIUQm2MIKQ4" />
     </Helmet>
   )
 }
