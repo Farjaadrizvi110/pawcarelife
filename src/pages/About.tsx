@@ -25,9 +25,9 @@ export default function About() {
     <div>
       <SEO
         title="About & Mission | Paws & Purpose"
-        description="Meet Farjaad — growth engineer, digital marketer, and animal lover from Karachi. Learn how Paws & Purpose turns every reader into real help for street dogs, cats, and working donkeys in Pakistan."
+        description="Meet Farjaad — growth engineer, digital marketer, and animal lover from Karachi. Learn how Paws & Purpose uses education, storytelling, and free tools to build global awareness for street dogs, cats, and working donkeys in Pakistan."
         path="/about"
-        keywords="about paws and purpose, animal rescue mission Pakistan, Syed Farjaad Raza Rizvi, Karachi animal shelter, TNVR Pakistan"
+        keywords="about paws and purpose, animal welfare awareness Pakistan, Syed Farjaad Raza Rizvi, Karachi animal advocacy, street animal education Pakistan"
         image={`${SITE_URL}/og-about.png`}
       />
       {/* Hero */}
@@ -86,8 +86,9 @@ export default function About() {
 
         <h2 id="help">How This Website Helps Animals</h2>
         <p>
-          This site is monetized through Google AdSense and reader support — and a portion of
-          everything it earns goes directly toward animal welfare in Pakistan:
+          Paws &amp; Purpose is dedicated to supporting animal welfare in Pakistan. Through the
+          community of readers who visit, share, and engage with this work, this site is able to
+          contribute directly to:
         </p>
         <ul>
           <li>Food for street dogs and cats</li>
@@ -95,9 +96,9 @@ export default function About() {
           <li>Support for local shelters and rescue workers doing the hardest work on the ground</li>
         </ul>
         <p>
-          Transparency matters to me. As this project grows, I will publish updates showing exactly
-          where the money goes — because if you trust this website with your time, you deserve to
-          see the impact.
+          Transparency matters to me. As this project grows, I will publish updates showing real
+          stories of impact — because if you trust this website with your time, you deserve to
+          see the difference it helps make for animals in Pakistan.
         </p>
       </section>
 
@@ -197,11 +198,12 @@ export default function About() {
           <h2 className="font-display text-4xl font-semibold text-parch">One Small Request</h2>
           <p className="mt-5 text-lg text-parch/80 leading-relaxed">
             If an article here taught you something, share it. If a rescue story moved you, tell
-            someone. Awareness travels further than money ever can.
+            someone. Awareness and compassion are the most powerful tools we have.
           </p>
           <p className="mt-5 text-lg text-parch/80 leading-relaxed">
-            Thank you for being here. Every visitor to this website is, quite literally, helping
-            an animal in Pakistan.
+            Thank you for being here. Every reader who shares an article, talks about these
+            issues, or treats an animal with a little more kindness is helping awareness grow
+            for animals in Pakistan and around the world.
           </p>
           <p className="mt-8 font-display text-xl text-tangerine">— Syed Farjaad Raza Rizvi</p>
           <p className="label-caps text-parch/50 mt-2">Growth Engineer · Digital Marketer · Animal Lover</p>

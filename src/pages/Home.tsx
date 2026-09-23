@@ -22,17 +22,17 @@ const TICKER = [
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Paws & Purpose — Animal Care That Gives Back'
+    document.title = 'Paws & Purpose — Animal Care With a Mission'
   }, [])
   const featured = ARTICLES.find((a) => a.featured)!
   const latest = ARTICLES.filter((a) => !a.featured).slice(0, 6)
-  const homeDesc = 'Paws & Purpose — practical dog, cat & donkey care guides that fund street animal rescue in Pakistan. Every reader helps an animal through ad-supported content and donations.'
+  const homeDesc = 'Paws & Purpose — practical dog, cat & donkey care guides, rescue stories, and free tools raising awareness for street animal welfare in Pakistan. Every reader helps an animal by reading and sharing.'
   const homeKeywords = 'dog care, cat care, donkey welfare, pet health, street animal rescue Pakistan, TNVR, pet care tips, vet advice, Karachi animal shelter'
 
   return (
     <div>
       <SEO
-        title="Paws & Purpose — Animal Care That Gives Back"
+        title="Paws & Purpose — Animal Care With a Mission"
         description={homeDesc}
         path="/"
         keywords={homeKeywords}
@@ -46,15 +46,16 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5 pt-14 pb-24 md:pt-20 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
           <div className="relative z-10">
             <p className="label-caps text-tangerine mb-5 flex items-center gap-2">
-              <PawIcon className="w-4 h-4" /> Animal care that gives back
+              <PawIcon className="w-4 h-4" /> Animal care with a mission
             </p>
             <h1 className="font-display text-5xl md:text-[64px] font-semibold leading-[1.05] text-balance text-parch">
               Every article you read helps an animal in{' '}
               <span className="text-tangerine">Pakistan</span>
             </h1>
             <p className="mt-6 text-lg text-parch/80 leading-relaxed max-w-lg">
-              Practical, vet-aware guides for dog and cat lovers everywhere — funding food,
-              rescue, and TNVR for street dogs, cats, and working donkeys in Karachi and beyond.
+              Practical, vet-aware guides for dog and cat lovers everywhere — raising awareness,
+              building compassion, and shining a light on street dogs, cats, and working donkeys
+              in Karachi and all across Pakistan.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
@@ -238,9 +239,9 @@ export default function Home() {
               a simple treatment could fix.
             </p>
             <p className="mt-4 text-parch/80 leading-relaxed">
-              This site is monetized through ads and reader support — and a portion of everything
-              it earns goes directly to food for strays, TNVR drives, and local shelters doing
-              the hardest work on the ground.
+              The mission of this website is simple: educate pet owners, surface the stories of
+              animals the world usually overlooks, and build a global community of people who
+              care more and know more about animal welfare.
             </p>
             <Link
               to="/about"
@@ -323,7 +324,7 @@ export default function Home() {
           </h2>
           <p className="mt-4 text-cream/90 leading-relaxed max-w-xl mx-auto relative">
             If an article here taught you something, share it. If a rescue story moved you, tell
-            someone. Awareness travels further than money ever can.
+            someone. Awareness and compassion are the most powerful tools we have.
           </p>
           <Link
             to="/articles"

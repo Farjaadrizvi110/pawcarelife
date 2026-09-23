@@ -47,7 +47,8 @@ export default function CookieConsent() {
           </span>
           <p className="text-sm text-bark/80 leading-relaxed">
             We use cookies to keep the site working and — with your permission — to show
-            personalized ads via Google AdSense, which funds animal rescue in Pakistan. Read our{' '}
+            personalized ads via Google AdSense. Reading and sharing this site helps build global
+            awareness for animal welfare in Pakistan. Learn more in our{' '}
             <Link to="/privacy" className="text-terracotta font-semibold underline underline-offset-2">
               Privacy Policy
             </Link>

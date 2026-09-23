@@ -164,9 +164,9 @@ export default function ArticlePage() {
           </span>
           <h3 className="font-display text-2xl font-semibold text-parch relative">Enjoyed this guide?</h3>
           <p className="mt-3 text-parch/80 leading-relaxed relative max-w-xl">
-            Explore more of our {article.category.toLowerCase()} articles — and learn how this
-            website turns every reader into real help for street dogs, cats, and working
-            donkeys in Pakistan.
+            Explore more of our {article.category.toLowerCase()} articles — and learn about the
+            mission of Paws &amp; Purpose: raising global awareness, educating pet owners, and
+            shining a light on street dogs, cats, and working donkeys in Pakistan.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 relative">
             <Link

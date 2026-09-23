@@ -74,7 +74,7 @@ export function WebSiteSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      'Practical dog, cat & donkey care guides that fund street animal rescue in Pakistan. Every reader helps an animal.',
+      'Practical dog, cat & donkey care guides, rescue stories, and free tools — supporting awareness for street animal welfare in Pakistan. Every reader helps an animal.',
     inLanguage: 'en',
     potentialAction: {
       '@type': 'SearchAction',
@@ -92,7 +92,7 @@ export function OrganizationSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description:
-      'Practical animal care guides written with love — and a mission. A portion of everything this site earns funds food, TNVR drives, and shelter support for street dogs, cats, and working donkeys in Pakistan.',
+      'Practical animal care guides written with love — and a mission. Together with its readers, Paws & Purpose supports food drives, TNVR initiatives, and shelter assistance for street dogs, cats, and working donkeys in Pakistan.',
     sameAs: [
       `${SITE_URL}/about`,
       `${SITE_URL}/contact`,

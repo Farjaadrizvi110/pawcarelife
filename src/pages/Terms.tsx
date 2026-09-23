@@ -17,9 +17,9 @@ export default function Terms() {
       <h2>1. About This Website</h2>
       <p>
         Paws &amp; Purpose is an educational website about animal care, operated by Syed Farjaad
-        Raza Rizvi from Karachi, Pakistan. The site is monetized through advertising (Google
-        AdSense) and reader support, and a portion of earnings is directed toward animal welfare
-        in Pakistan.
+        Raza Rizvi from Karachi, Pakistan. The site is dedicated to raising awareness of street
+        animal welfare issues in Pakistan and providing practical, accessible pet care guidance
+        to readers worldwide.
       </p>
 
       <h2>2. Not Veterinary Advice</h2>
@@ -73,12 +73,14 @@ export default function Terms() {
         animal's care based on information found here.
       </p>
 
-      <h2>8. Donations and the Mission</h2>
+      <h2>8. Mission and Content Purpose</h2>
       <p>
-        Statements about a portion of earnings supporting animal welfare in Pakistan reflect our
-        genuine commitment. As the project grows, we intend to publish transparency updates
-        showing how funds are used. These statements are not a charitable solicitation regulated
-        in your jurisdiction, and reading this site is always free.
+        The mission of Paws &amp; Purpose is to educate readers on compassionate animal care and
+        to shine a light on the realities of street animal welfare in Pakistan. Content on this
+        site is provided for free educational use. Any references to support for animal welfare
+        reflect the genuine commitments and personal mission of the site operator; reading this
+        site is always free, and no part of your use of this site constitutes a solicitation of
+        charitable donations in any jurisdiction.
       </p>
 
       <h2>9. Governing Law</h2>

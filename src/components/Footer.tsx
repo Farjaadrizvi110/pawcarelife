@@ -5,7 +5,7 @@ import { CATEGORIES } from '../data/articles'
 export default function Footer() {
   return (
     <footer className="bg-forest-deep text-parch/80">
-      <div className="max-w-6xl mx-auto px-5 py-14 grid gap-10 md:grid-cols-4">
+      <div className="max-w-6xl mx-auto px-5 py-14 grid gap-10 md:grid-cols-5">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="w-9 h-9 rounded-full bg-parch text-forest flex items-center justify-center">
@@ -16,9 +16,9 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-sm leading-relaxed max-w-sm text-parch/70">
-            Practical animal care guides written with love — and a mission. A portion of
-            everything this site earns funds food, TNVR drives, and shelter support for
-            street dogs, cats, and working donkeys in Pakistan.
+            Practical animal care guides written with love — and a mission. Together with
+            its readers, this site supports food drives, TNVR initiatives, and shelter
+            assistance for street dogs, cats, and working donkeys in Pakistan.
           </p>
           <p className="mt-5 text-xs text-parch/50 max-w-sm leading-relaxed">
             All health content is for informational purposes only and is not a substitute
@@ -49,6 +49,15 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="label-caps text-tangerine mb-4">Legal</h4>
+          <ul className="space-y-2.5 text-sm">
+            <li><Link to="/privacy" className="hover:text-parch transition-colors">Privacy Policy</Link></li>
+            <li><Link to="/terms" className="hover:text-parch transition-colors">Terms of Service</Link></li>
+            <li><Link to="/contact" className="hover:text-parch transition-colors">Contact Us</Link></li>
           </ul>
         </div>
       </div>

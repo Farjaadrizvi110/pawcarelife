@@ -1429,7 +1429,7 @@ export const ARTICLES: Article[] = [
           '# Sponsor a TNVR surgery. It is the single highest-impact gift in street animal welfare.',
           '# Adopt or help with adoptions. Pakistani street dogs ("desi dogs") make remarkable, resilient companions and are adopted worldwide.',
           '# Share their stories. Awareness travels further than money — every share puts these animals in front of someone new who can help.',
-          '# Read and support this site. This website itself is part of the mission: a portion of everything it earns goes directly to food, TNVR drives, and shelter support in Pakistan.',
+          '# Read and share this site. Every article you read and share helps build global awareness for street animal welfare in Pakistan.',
         ],
       },
       {
