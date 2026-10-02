@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 
-export const SITE_URL = 'https://pawsandpurpose.com'
+export const SITE_URL = 'https://pawcare.lol'
 export const SITE_NAME = 'Paws & Purpose'
 export const DEFAULT_IMAGE = `${SITE_URL}/og-default.png`
 export const AUTHOR_NAME = 'Syed Farjaad Raza Rizvi'
